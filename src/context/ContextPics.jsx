@@ -12,12 +12,13 @@ export const ProviderPics = ({children}) => {
       }
   
       const incrementarLikes = (id) => {
-        console.log(id);
+        // console.log(id);
           setFotos(prevFotos =>
               prevFotos.map(foto =>
-                  foto.id === id ? { ...foto, likes: foto.likes + 1 } : foto
+                  foto.id === id ? { ...foto, likes: 1 } : foto
               )
           );
+        //   console.log('fotos: ', fotos)
       };
 
    const obtenerGaleria = useCallback( async() => {
@@ -27,8 +28,7 @@ export const ProviderPics = ({children}) => {
                 Authorization: "UKeoe1DCnMV0wYmSIomFw7GW5dv5bKKQXPA9Epl70QRXmQMWPa19hYMa" 
             }
          });
-        const datos = await respuesta.json();
-        console.log(datos); 
+        const datos = await respuesta.json(); 
         setFotos(datos.photos);
 
     } catch (e){

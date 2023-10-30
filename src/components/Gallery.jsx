@@ -25,7 +25,7 @@ const Gallery = () => {
           (
             fotos.length > 0 ?
               fotos.map((foto) => (
-                <div key={foto.id} style={{padding: '2px', width: '18rem'}}>
+                <div className='foto' key={foto.id}>
                   <IconHeart className='corazon' filled={foto.likes > 0 ? true : false}/>
                   {/* <div style={{color: 'black'}}>{foto.likes}</div> */}
                   <img  onClick={() => incrementarLikes(foto.id)} src={foto.src.original} className="card-img-top" style={{height: '250px'}} alt={foto.alt} />
