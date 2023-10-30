@@ -12,13 +12,13 @@ const Favorites = () => {
   }, [fotos])
   return (
     <div>
-      <h3 className="App" style={{textAlign: 'center'}}>Favoritas</h3>
+      <h1 className="App" style={{textAlign: 'center'}}>Favoritas</h1>
       {
         cargando ? 'Cargando' :
           fotos.filter((foto) => foto.likes > 0).length == 0 ? <h3 className="favoritos">No tienes favoritos...</h3> :
             fotos.filter((foto) => foto.likes > 0).map((item) => (
-              <div key={item.id} style={{padding: '2px'}}>
-                <img src={item.src} alt={item.alt} className="card-img-top" onClick={() => unLiked(item.id)}/>
+              <div className="foto" key={item.id} style={{padding: '5px'}}>
+                <img src={item.src.original} alt={item.alt} style={{height: '250px'}} className="card-img-top" onClick={() => unLiked(item.id)}/>
               </div>
           ))
       }

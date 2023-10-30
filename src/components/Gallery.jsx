@@ -5,7 +5,7 @@ import IconHeart from "./IconHeart";
 
 const Gallery = () => {
   const [cargando, setCargando] = useState(true)
-  const {fotos, setFotos, incrementarLikes, obtenerGaleria} = useContext(ContextPics);
+  const {fotos, incrementarLikes, obtenerGaleria} = useContext(ContextPics);
 
   
 

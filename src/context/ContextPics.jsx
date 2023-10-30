@@ -47,5 +47,3 @@ export const ProviderPics = ({children}) => {
         </ContextPics.Provider>
    )
 };
-
-// export default ProviderPics;
