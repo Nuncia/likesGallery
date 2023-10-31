@@ -30,6 +30,7 @@ export const ProviderPics = ({children}) => {
          });
         const datos = await respuesta.json(); 
         setFotos(datos.photos);
+        console.log('datos: ', datos)
 
     } catch (e){
         console.log(e.message);
