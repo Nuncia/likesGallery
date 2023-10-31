@@ -20,7 +20,7 @@ const Favorites = () => {
                 <div className="foto" key={item.id}>
                   <img src={item.src.original} alt={item.alt} style={{height: '250px'}} className="card-img-top" onClick={() => unLiked(item.id)}/>
                   <div style={{margin: '8px'}}>
-                   Fotografo:  <a href={item.photographer_url} style={{fontWeight: '700'}}>{item.photographer}</a>
+                    Fotografo:  <a href={item.photographer_url} style={{fontWeight: '700'}}>{item.photographer}</a>
                   </div>
                 </div>
             ))

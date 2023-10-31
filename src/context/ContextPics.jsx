@@ -9,15 +9,15 @@ export const ProviderPics = ({children}) => {
         setFotos(prevFotos =>
           prevFotos.map(foto => foto.id === id ? { ...foto, likes: 0 } : foto)
       );
-      }
+    }
   
-      const incrementarLikes = (id) => {
-          setFotos(prevFotos =>
-              prevFotos.map(foto =>
-                  foto.id === id ? { ...foto, likes: 1 } : foto
-              )
-          );
-      };
+    const incrementarLikes = (id) => {
+        setFotos(prevFotos =>
+            prevFotos.map(foto =>
+                foto.id === id ? { ...foto, likes: 1 } : foto
+            )
+        );
+    };
 
     const obtenerGaleria = useCallback( async() => {
         try{
