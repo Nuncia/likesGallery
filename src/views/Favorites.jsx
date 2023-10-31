@@ -12,7 +12,7 @@ const Favorites = () => {
   }, [fotos])
   return (
     <div className="App">
-      <h1 style={{textAlign: 'center', fontWeight: '700'}}>Favoritas</h1>
+      <h1 style={{textAlign: 'center', fontWeight: '700'}}>Favoritos</h1>
       <div className="cards grid-columns-5 p-3">
         {
           cargando ? 'Cargando' :
