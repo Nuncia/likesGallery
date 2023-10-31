@@ -21,23 +21,22 @@ export const ProviderPics = ({children}) => {
         //   console.log('fotos: ', fotos)
       };
 
-   const obtenerGaleria = useCallback( async() => {
-    try{
-        const respuesta = await fetch("https://api.pexels.com/v1/search?query=people",{
-            headers: {
-                Authorization: "UKeoe1DCnMV0wYmSIomFw7GW5dv5bKKQXPA9Epl70QRXmQMWPa19hYMa" 
-            }
-         });
-        const datos = await respuesta.json(); 
-        setFotos(datos.photos);
-        console.log('datos: ', datos)
+    const obtenerGaleria = useCallback( async() => {
+        try{
+            const respuesta = await fetch("https://api.pexels.com/v1/search?query=people",{
+                headers: {
+                    Authorization: "UKeoe1DCnMV0wYmSIomFw7GW5dv5bKKQXPA9Epl70QRXmQMWPa19hYMa" 
+                }
+            });
+            const datos = await respuesta.json(); 
+            setFotos(datos.photos);
+            console.log('datos: ', datos)
 
-    } catch (e){
-        console.log(e.message);
-    }
-   });
+        } catch (e){
+            console.log(e.message);
+        }
+    });
 
-   
    useEffect(() => {
         obtenerGaleria();
    },[]);
