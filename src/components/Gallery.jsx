@@ -29,7 +29,7 @@ const Gallery = () => {
                   <IconHeart className='corazon' filled={foto.likes > 0 ? true : false}/>
                   <img  onClick={() => incrementarLikes(foto.id)} src={foto.src.original} className="card-img-top" style={{height: '250px'}} title={foto.photographer} alt={foto.alt} />
                   <div style={{margin: '8px'}}>
-                    <a href={foto.photographer_url} style={{fontWeight: '700'}}>{foto.photographer}</a>
+                   Fotografo:  <a href={foto.photographer_url} style={{fontWeight: '700'}}>{foto.photographer}</a>
                   </div>
                 </div>
               )) : 'Cargando...'

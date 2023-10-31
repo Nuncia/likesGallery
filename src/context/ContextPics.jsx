@@ -12,13 +12,11 @@ export const ProviderPics = ({children}) => {
       }
   
       const incrementarLikes = (id) => {
-        // console.log(id);
           setFotos(prevFotos =>
               prevFotos.map(foto =>
                   foto.id === id ? { ...foto, likes: 1 } : foto
               )
           );
-        //   console.log('fotos: ', fotos)
       };
 
     const obtenerGaleria = useCallback( async() => {
@@ -30,7 +28,6 @@ export const ProviderPics = ({children}) => {
             });
             const datos = await respuesta.json(); 
             setFotos(datos.photos);
-            console.log('datos: ', datos)
 
         } catch (e){
             console.log(e.message);
